@@ -1,0 +1,2 @@
+# mental_math_question_settingsystem
+递归写法完成高度随机出题的管理系统
