@@ -1,3 +1,4 @@
+//æ ¸å¿ƒå‡ºé¢˜æ¨¡å—ï¼Œå¯ç›´æ¥ä½¿ç”¨
 #include <bits/stdc++.h>
 using namespace std;
 void numcraet(double t);
@@ -12,9 +13,9 @@ int main()
 	int z,M,N;
 	char a;
 	srand(time(0));
-	printf("ÇëÊäÈëÒ³Êı\n");
+	printf("è¯·è¾“å…¥é¡µæ•°\n");
 	cin>>M;
-	printf("ÇëÊäÈëÃ¿Ò³ÌâÄ¿Êı\n");
+	printf("è¯·è¾“å…¥æ¯é¡µé¢˜ç›®æ•°\n");
 	cin>>N;
 	int t;
 	for(int i=1;i<=M;i++)
@@ -23,7 +24,7 @@ int main()
 		{   
 		    z=1+rand()%2;//z==1or2 
 			t=rand()%2;//t==0or1 
-			if(t==1)//t ÓÃÀ´Ëæ»ú¾ö¶¨Éú³ÉÄÄÖÖÀàĞÍ 
+			if(t==1)//t ç”¨æ¥éšæœºå†³å®šç”Ÿæˆå“ªç§ç±»å‹ 
 	        title('(',a,z,z,0,0);//
 	        else if(t==0)//
 	        title(a,a,z,z,1,0);//
@@ -37,21 +38,21 @@ void titlecreat()
 {
 	char a;
 	int z,t;
-	z=1+rand()%3;//¾ö¶¨Éú³É¼¸¸öÀ¨ºÅ 
-	t=rand()%2;//¾ö¶¨Ê×ÏÈÊÇ·ñÉú³ÉÀ¨ºÅ 
+	z=1+rand()%3;//å†³å®šç”Ÿæˆå‡ ä¸ªæ‹¬å· 
+	t=rand()%2;//å†³å®šé¦–å…ˆæ˜¯å¦ç”Ÿæˆæ‹¬å· 
 	if(t==1) title('(',a,z,z,0,0);
-	else if(t==0) title(a,a,z,z,1,0);//zÊÇÀ¨ºÅ¸öÊı 
+	else if(t==0) title(a,a,z,z,1,0);//zæ˜¯æ‹¬å·ä¸ªæ•° 
 	cout<<'=';
 } 
 
 
-int numcreat()//Éú³ÉÊı×Ö
+int numcreat()//ç”Ÿæˆæ•°å­—
 {
     return 1+rand()%100;
 }
 
 
-char pcreat()//Éú³ÉÔËËã·û
+char pcreat()//ç”Ÿæˆè¿ç®—ç¬¦
 {
 	int t;
 	t=rand()%4;
@@ -62,7 +63,7 @@ char pcreat()//Éú³ÉÔËËã·û
 }
 
 
-void numscreat()//Éú³Éµ¥¸öÔËËã
+void numscreat()//ç”Ÿæˆå•ä¸ªè¿ç®—
 {
 	int num;
 	char s;
@@ -75,30 +76,30 @@ void numscreat()//Éú³Éµ¥¸öÔËËã
 }
 
 
-void title(char s1,char s2,int t1,int t2,int t3,int t4) //t3,t4ÊÇÏÖ´æ×óÓÒÀ¨ºÅ 
+void title(char s1,char s2,int t1,int t2,int t3,int t4) //t3,t4æ˜¯ç°å­˜å·¦å³æ‹¬å· 
 {
     int m;
     m=0;
 	int num;
 	char s;
 	int ta=rand()%2;//[0,1] 
-    int tb=rand()%2;//Ëæ»ú 
+    int tb=rand()%2;//éšæœº 
     int tc=rand()%2;
     int td=rand()%2;
 	char a;
-	if(s1=='('&&t1>0)//Èç¹ûs1==(,Êä³ö(,t1--¡£½øÈëÏÂÒ»¸öº¯Êı 
+	if(s1=='('&&t1>0)//å¦‚æœs1==(,è¾“å‡º(,t1--ã€‚è¿›å…¥ä¸‹ä¸€ä¸ªå‡½æ•° 
 	{
 		p++;
 		cout<<'(';
 		t1--;
 		title(a,a,t1,t2,1,0);
 	}
-	else if(s1==a)//s1²»Îª(ÓĞÁ½ÖÖÇé¿ö. 
+	else if(s1==a)//s1ä¸ä¸º(æœ‰ä¸¤ç§æƒ…å†µ. 
 	{
 		if(t3==1)//t3==1
 		{
-			numscreat();//Éú³ÉÒ»¶ÔÔËËã 
-			if(tb==1&&p>0)//¾ö¶¨ ÊÇ·ñÉú³ÉÓÒÀ¨ºÅ 
+			numscreat();//ç”Ÿæˆä¸€å¯¹è¿ç®— 
+			if(tb==1&&p>0)//å†³å®š æ˜¯å¦ç”Ÿæˆå³æ‹¬å· 
 			{
 		    p--;
 			title(a,')',t1,t2,0,0);
@@ -110,7 +111,7 @@ void title(char s1,char s2,int t1,int t2,int t3,int t4) //t3,t4ÊÇÏÖ´æ×óÓÒÀ¨ºÅ
 		    s=pcreat();
 		    cout<<s;
 		    if(s=='/') m=1;
-		    if(tc==0&&t1>0&&m==0) title('(',a,t1,t2,0,0);//¾ö¶¨ÊÇ·ñÉú³É×óÀ¨ºÅ 
+		    if(tc==0&&t1>0&&m==0) title('(',a,t1,t2,0,0);//å†³å®šæ˜¯å¦ç”Ÿæˆå·¦æ‹¬å· 
 		    else title(a,a,t1,t2,1,0);
 		}
 	}
@@ -131,7 +132,7 @@ void title(char s1,char s2,int t1,int t2,int t3,int t4) //t3,t4ÊÇÏÖ´æ×óÓÒÀ¨ºÅ
 			s=pcreat();
 			cout<<s;
 			if(s=='/') m=1;
-			if(td==0&&t1>0&&m==0) title('(',a,t1,t2,0,0);//¾ö¶¨ÊÇ·ñÉú³É×óÀ¨ºÅ 
+			if(td==0&&t1>0&&m==0) title('(',a,t1,t2,0,0);//å†³å®šæ˜¯å¦ç”Ÿæˆå·¦æ‹¬å· 
 		    else title(a,a,t1,t2,1,0);
 		}
 	}
